@@ -24,3 +24,12 @@ function growTrait(trait) {
 document.addEventListener("DOMContentLoaded", () => {
     updateTraits(); // Initialize trait bars
 });
+// Function to increase trait growth when button is clicked
+function growTrait(trait) {
+    let traitBar = document.getElementById(trait);
+    let currentWidth = parseInt(traitBar.style.width) || 0;
+
+    if (currentWidth < 100) { 
+        traitBar.style.width = (currentWidth + 10) + "%";
+    }
+}
